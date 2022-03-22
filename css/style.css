@@ -47,6 +47,7 @@ body, html {
 .main .subtitile {
   font-size: 1.2em;
   margin: 0;
+  font-family: 'Ubuntu Mono', monospace;
 }
 .main p {
   color: #888;

@@ -1,24 +1,82 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>6iXFORCE - Turn Your Dreams Into Reality</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-<link rel="stylesheet" href="./css/style.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
 
+html, body {font-family: Verdana, sans-serif; margin:0; height: 100vh;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+.main-container {
+ height: 100vh;
+ display: block;
+ overflow: auto;
+ text-align: center;
+ text-justify: auto;
+} 
+
+/* Slideshow container */
+.slideshow-container {
+    height: 100%;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+</style>
 </head>
 <body>
-<!-- partial:index.partial.html -->
-<canvas id="bg"></canvas>
-<div class="main">
-	<h1 class="title">6iX FORCE</h1>
-	<h2 class="subtitile">/ s ɪ k s · f ɔ ː r s /</h2>
-	<p>Turn Your Dreams Into Reality.<br>Softwares in Innovation</p>
-	<p><a href="#">contact us</a></p>
+
+<div id="main-container" class="main-container" onclick="location.href = './intro.html';">
+<div class="slideshow-container">
+<div class="mySlides">
+  <img src="img/6ixforce_black.png" width="800px">
 </div>
-<!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r70/three.min.js'></script><script  src="./script/script.js"></script>
+
+<div class="mySlides">
+   <img src="img/6ixforce.png" width="800px">
+</div>
+
+</div>
+
+</div>
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var mainContainer = document.getElementById("main-container");
+  if (mainContainer.style.backgroundColor === '') {
+    mainContainer.style.backgroundColor = "black";
+  } else if (mainContainer.style.backgroundColor === 'black'){
+    mainContainer.style.backgroundColor = "white";
+  } else if (mainContainer.style.backgroundColor === 'white'){
+    mainContainer.style.backgroundColor = "black";
+  }
+ 
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+
+  slides[slideIndex-1].style.display = "block";  
+
+  setTimeout(showSlides, 200); // Change image every 2 seconds
+}
+</script>
 
 </body>
-</html>
+</html> 
