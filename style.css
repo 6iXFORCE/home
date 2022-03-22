@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+
+@font-face {
+  font-family: 'Hackney';
+  src: url('fonts/Hackney.eot');
+  src: url('fonts/Hackney.eot?#iefix') format('embedded-opentype'),
+       url('fonts/Hackney.svg#Hackney') format('svg'),
+       url('fonts/Hackney.ttf') format('truetype'),
+       url('fonts/Hackney.woff') format('woff'),
+       url('fonts/Hackney.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: #ececec;
+}
+
+#bg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.main {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.main .title {
+  font-family: "Hackney";
+  font-size: 7em;
+  margin: 0;
+}
+.main .subtitile {
+  font-size: 1.2em;
+  margin: 0;
+}
+.main p {
+  color: #888;
+  margin-top: 10px;
+  font-size: 0.9em;
+  font-family: 'Ubuntu Mono', monospace;
+}
+.main p a {
+  color: #555;
+  text-decoration: underline;
+}
